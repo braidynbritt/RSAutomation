@@ -12,11 +12,11 @@
 
 ## What the files do
 ### install_helper.bat
-    This file installs necessary libraries and software so you don't need to deal with it
+This file installs necessary libraries and software so you don't need to deal with it
 ### get_click.py
-    This find's where your cursor is on screen. When starting this script, make sure mouse is on the correct display
+This find's where your cursor is on screen. When starting this script, make sure mouse is on the correct display
 ### auto_click.py
-    This is the actual automation script that is a Work In Progress
+This is the actual automation script that is a Work In Progress
 
 ## How to run the .py files
   To run .py files you will need to enter in the terminal 'python3 [filename]'. The auto_click takes arguments that I will further explain later in this.
