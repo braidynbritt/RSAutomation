@@ -2,10 +2,10 @@
 
 ECHO "Installing Notepad++"
 timeout /t 2 >NUL
-start winget install Notepad++.Notepad++
+start winget install --id Notepad++.Notepad++
 ECHO "Installing Python3"
 timeout /t 2 >NUL
-start winget install Python.Python.3.12
+start winget install --id Python.Python.3.12
 ECHO "Installing Pip"
 timeout/t 2 >NUL
 start python get-pip.py
