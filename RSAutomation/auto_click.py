@@ -5,12 +5,25 @@ import sys
 import random
 import traceback
 
+def convert_res(xcoords, ycoords):
+    x1 = int(round(xcoords[0]*.75, 0))
+    x2 = int(round(xcoords[1]*.75, 0))
+    y1 = int(round(ycoords[0]*.75, 0))
+    y2 = int(round(ycoords[1]*.75, 0))
+
+    xcoords = (x1, x2)
+    ycoords = (y1, y2)
+    return xcoords, ycoords
+
 def mouse_functions(coord_info, button='left'):
     xcoord, ycoord, duration = coord_info
     pyautogui.moveTo(xcoord, ycoord, duration)
     pyautogui.click(button = button)
 
 def get_coords(xcoords, ycoords, duration):
+    convert = False
+    if convert:
+        xcoords, ycoords = convert_res(xcoords, ycoords)
     first_xcoord = xcoords[0]
     second_xcoord = xcoords[1]
     first_ycoord = ycoords[0]
@@ -256,7 +269,8 @@ def main():
             else:
                 print("Not yet implemented")
         elif args[0].lower() == 'test':
-            bankRun("Rune")
+            #bankRun("Rune")
+            print(convert_res((1000, 2560), (1000, 1440)))
         else:
             print("Skill not yet implemented")
      
